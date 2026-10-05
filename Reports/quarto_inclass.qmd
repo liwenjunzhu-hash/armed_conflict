@@ -1,6 +1,6 @@
 ---
 title: "CHL5233: Quarto in-class assignment"
-author: "PUT YOUR NAME HERE"
+author: "Julie Zhu"
 format: 
   pdf:
     geometry:
@@ -48,7 +48,7 @@ armed_conflict/
 The R code chunk below includes the R packages required to knit this document. This is often called a **setup** code. We want the code to run, but we don't want the final document to show the code or results. Edit the code chunk so that the code will run but the code and results (including all warnings and messages) are hidden from the final PDF output.
 
 ```{r}
-install.packages("kableExtra")
+install.packages("kableExtra", repos = "https://cloud.r-project.org")
 library(tidyverse)
 library(knitr)
 library(kableExtra)
@@ -75,8 +75,8 @@ The **final goal** is to display a **bar chart** that depicts how many countries
 ```{r}
 #| echo: TRUE
 #countries <- read.table("../data/raw/countries.txt", header = TRUE)
-countries <- read.table("data/raw/countries.txt", header = TRUE)
-regions <- read.table("data/raw/regions.txt", header = TRUE)
+countries <- read.table("../data/raw/countries.txt", header = TRUE)
+regions <- read.table("../data/raw/regions.txt", header = TRUE)
 ## more code here
 ```
 *Replace this sentence with another sentence that states how many countries are included in the data set.*
@@ -84,10 +84,9 @@ regions <- read.table("data/raw/regions.txt", header = TRUE)
 **Second**, read in `regions.txt` and also write a sentence that states how many countries are included in the data set.
 
 ```{r}
-countries <- read.table("data/raw/countries.txt", header = TRUE)
-
-nrow(countries)
-ncol(countries)
+regions <- read.table("../data/raw/regions.txt", header = TRUE)
+nrow(regions)
+ncol(regions)
 ```
 
 The countries data set includes `186` countries.
