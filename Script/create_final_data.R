@@ -1,7 +1,7 @@
+### library and install backages
 library(tidyr)
 install.packages("janitor")
 library(dplyr)
-library(tidyr)
 
 ### a) Prepare World Bank data
 
@@ -127,4 +127,3 @@ write.csv(
   final_data,
   "data/processed/final_data.csv",
   row.names = FALSE
-)
